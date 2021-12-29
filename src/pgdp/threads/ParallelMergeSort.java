@@ -11,7 +11,6 @@ public class ParallelMergeSort extends RecursiveAction {
     public ParallelMergeSort(Comparable[] array) {
         Comparable[] helper = new Comparable[array.length];
         ParallelMergeSort parallelMergeSort = new ParallelMergeSort(array, helper, 0, array.length-1);
-        parallelMergeSort.compute();
     }
 
     public ParallelMergeSort(Comparable[] array, Comparable[] helper, int leftIndex, int rightIndex) {
