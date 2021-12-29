@@ -18,12 +18,12 @@ public class ParallelMergeSort extends RecursiveAction {
         this.array = array;
         low = leftIndex;
         high = rightIndex;
-        mid = (low+high)/2;
+        mid = (low + high) / 2;
     }
 
     @Override
     protected void compute() {
-        if (low<high) {
+        if (low < high) {
 
             ParallelMergeSort left = new ParallelMergeSort(array, new Comparable[mid], low, mid);
             ParallelMergeSort right = new ParallelMergeSort(array, new Comparable[array.length-mid], mid+1, high);
